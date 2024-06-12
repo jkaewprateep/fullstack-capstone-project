@@ -7,7 +7,7 @@ import { useAppContext } from '../../context/AuthContext';
 const Profile = () => {
   const [userDetails, setUserDetails] = useState({});
  const [updatedDetails, setUpdatedDetails] = useState({});
- const {setUserName} = useAppContext();
+//  const {setUserName} = useAppContext();
  const [changed, setChanged] = useState("");
 
  const [editMode, setEditMode] = useState(false);
@@ -63,7 +63,7 @@ const handleSubmit = async (e) => {
       return;
     }
 
-    const payload = { ...updatedDetails };
+    // const payload = { ...updatedDetails };
     const response = await fetch(`${urlConfig.backendUrl}/api/auth/update`, {
       method: "PUT",//Step 1: Task 1
       headers: {//Step 1: Task 2
